@@ -9,6 +9,10 @@
 	body {
 		background: #fff;
 	}
+body2 {
+    margin: 0;
+    overflow: hidden;
+}
 
 	body, input, select, textarea {
 		color: #555f66;
@@ -163,6 +167,21 @@
 	section.special, article.special {
 		text-align: center;
 	}
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
 
 	header p {
 		color: #bbb;
@@ -207,6 +226,14 @@
 			font-size: 1.5em;
 			margin: -1em 0 2em 0;
 		}
+.overlay2 h5 {
+    text-align: center; /* Centers the text */
+    width: 100%; /* Ensures it spans the full width */
+    font-size: 1.8em; /* Adjust size as needed */
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
 
 /* General Dropdown Styling */
 .dropdown {
@@ -1225,7 +1252,42 @@
     border-radius: 10px;
     max-width: 60%;
 }
+.overlay2 {
+    position: absolute;
+    bottom: 30%; /* Raises the list higher */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+.overlay2 {
+    position: absolute;
+    bottom: 35%; /* Moves the text overlay higher */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+}
 
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+}
+
+.column {
+    width: 30%;
+    padding: 10px;
+}
+.section {
+    scroll-margin-top: 100px; /* Ensures proper scroll location */
+    position: relative;
+}
 .overlay h2 {
     margin-bottom: 10px;
     font-size: 1.5em;
@@ -1284,6 +1346,24 @@
     background-attachment: fixed; /* Enables Parallax Effect */
     opacity: 1;
     transition: opacity 0.5s ease-out;
+}
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.image-header {
+    position: absolute;
+    top: 20px; /* Moves the header into correct position */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 10; /* Ensures it stays visible */
 }
 
 
