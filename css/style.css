@@ -1244,7 +1244,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/corporate.jpeg'); /* Replace with actual image path */
+    background-image: url('../images/Corporate.jpeg'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
