@@ -40,8 +40,16 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5 {
 		color: #666f77;
+		font-weight: 300;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+		letter-spacing: 0.125em;
+	}
+	 h6 {
+		color: #cfb06e;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -75,8 +83,9 @@
 	}
 
 	h6 {
-		font-size: 0.7em;
+		font-size: 1.25em;
 		line-height: 1.5em;
+		text-decoration: underline;
 	}
 
 	sub {
@@ -990,6 +999,10 @@
 			background: #41576C !important;
 			color: #cfb06E;
 		}
+		.wrapper.style4 {
+			background: #41576C !important;
+			color: #cfb06E;
+		}
 			.wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
 				color: #cfb06E;
 			}
@@ -1236,6 +1249,13 @@
     overflow: hidden;
 	background: transparent !important;
 }
+/* Parallax Banner2 */
+.parallax-banner2 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+}
 
 /* Background Image */
 .parallax-bg {
@@ -1245,6 +1265,20 @@
     width: 100%;
     height: 100%;
     background-image: url('../images/Corporate.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+/* Background Image */
+.parallax-bg2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/FN.jpeg') !important; /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
