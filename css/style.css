@@ -1262,15 +1262,16 @@ body2 {
     padding: 15px;
     border-radius: 5px;
 }
-.overlay2 {
+.overlay3 {
     position: absolute;
-    bottom: 35%; /* Moves the text overlay higher */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 5px;
+    top: 50%;  /* Centers the container vertically */
+    left: 50%;  /* Centers the container horizontally */
+    transform: translate(-50%, -50%);  /* Ensures exact centering */
+    width: 60%;  /* Adjusts the width of the container */
+    background: rgba(255, 255, 255, 0.7);  /* Keeps background readable */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;  /* Ensures text is centered */
 }
 
 .columns-container {
@@ -1278,6 +1279,23 @@ body2 {
     justify-content: space-between;
     text-align: center;
     color: white;
+}
+.columns-container3 {
+    display: flex;
+    flex-direction: column;  /* Stacks items vertically */
+    align-items: center;  /* Centers content horizontally */
+}
+
+.columns-container3 ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.columns-container3 li {
+    margin: 10px 0;  /* Adds spacing between items */
+    font-size: 1.1em;
+    color: white;  /* Keeps text readable */
 }
 
 .column {
