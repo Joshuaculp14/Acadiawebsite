@@ -1336,6 +1336,20 @@ body2 {
     overflow: hidden;
 	background: transparent !important;
 }
+/* Parallax Banner3 */
+.parallax-banner3 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+}
+/* Parallax Banner4 */
+.parallax-banner4 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+}
 
 /* Background Image */
 .parallax-bg {
@@ -1359,6 +1373,32 @@ body2 {
     width: 100%;
     height: 100%;
     background-image: url('../images/FN.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/CA1.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/PM1.jpeg') !important; /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
