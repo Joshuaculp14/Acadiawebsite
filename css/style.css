@@ -1398,7 +1398,7 @@ body2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/PM1.jpeg') !important; /* Replace with actual image path */
+    background-image: url('../images/pm1.jpeg') !important; /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
