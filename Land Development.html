@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Ion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
 	<head>
 		<title>Acadia</title>
@@ -16,6 +12,32 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let sections = document.querySelectorAll(".section");
+            let index = 0;
+            let isScrolling = false;
+            
+            function scrollPage(event) {
+                if (isScrolling) return;
+                isScrolling = true;
+                setTimeout(() => isScrolling = false, 800); 
+                
+                event.preventDefault();
+                if (event.deltaY > 0) {
+                    index = Math.min(index + 1, sections.length - 1);
+                } else {
+                    index = Math.max(index - 1, 0);
+                }
+                window.scrollTo({
+                    top: sections[index].offsetTop,
+                    behavior: "smooth"
+                });
+            }
+            
+            window.addEventListener("wheel", scrollPage, { passive: false });
+        });
+    </script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -75,95 +97,62 @@
 
 		<!-- Banner -->
 			
-<section id="banner">
-    <video autoplay muted loop playsinline>
-        <source src="video/Video4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="inner">
-<h2>&nbsp;</h2>
-<img src="images/logo.png" width="709" height="186" alt="Company Logo"> 	
-	</div>
-</section>
+<body>
+    <div class="section" id="section1">
+    <img src="images/ld1.jpeg" alt="Urban and Rural Roads">
+    <div class="overlay3">
+        <h2>Single Family</h2>
+                    <li>Zoning & Land Use Analysis – Evaluate existing zoning and explore rezoning opportunities.</li>
+                    <li>Subdivision Planning & Lot Layout – Optimize lot sizes, setbacks, and access points.</li>
+                    <li>Site Servicing Design – Water, sanitary, stormwater, and electrical connections.</li>
+					<li>Access & Driveway Planning – Design safe and efficient road and driveway layouts.</li>
+					<li>Stormwater Management Plans – Tailored designs for municipal/provincial approval.</li>
+					<li>Permit & Approval Coordination – Navigate municipal permitting processes and development applications.</li>
+    </div>
+</div>
 
+<div class="section" id="section2">
+    <img src="images/ld3.jpeg" alt="Highways">
+    <div class="overlay3">
+        <h2>Multi-Family</h2>
+					<li>Density Analysis & Zoning Review – Optimize unit counts within municipal regulations.</li>
+                    <li>Site Planning & Building Layout – Efficient land use planning, including parking and amenity spaces.</li>
+                    <li>Servicing Capacity Assessments – Water, sewer, stormwater, and hydro infrastructure evaluations.</li>
+                    <li>Stormwater & Erosion Control Design – Sustainable systems that meet BC and Ontario standards.</li>
+					<li>Traffic Impact & Parking Studies – Ensure compliance with local parking and traffic bylaws.</li>
+					<li>Affordable Housing Strategy Integration – Navigate inclusionary zoning and municipal housing policies.</li>
+					<li>Permit Application Support – Development permits, building permits, and rezoning applications.</li>
 
-		<!-- One -->
-			<section id="one" class="wrapper style1">
-				<header class="major">
-					<h2>redefining engineering</h2>
-					<div class="align-center">
-					<ul class="actions">
-					  <li><a href="Services.html" class="button alt"><strong>What We Do</strong></a></li>
-					</ul>
-					</div>
-</header>
-				<div class="container">
-					<div class="row">
-						<div class="4u">
-							<section class="special box">
-								<img src="images/Innovate2.png" width="200" height="194" alt="innovate"/>
-								<h3>Innovate</h3>
-								<p>Innovation is at the heart of what Acadia Engineering Inc. is driving.</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<img src="images/Adapt.png" width="200" height="194" alt=""/>
-								<h3>Adapt</h3>
-								<p>We strive to adapt to our clients needs and market conditions.</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<img src="images/Deliver.png" width="200" height="194" alt=""/>
-								<h3>Deliver</h3>
-								<p>Our commitment is to deliver on time and on budget.</p>
-							</section>
-						</div>
-					</div>
-					
-				</div>
-			</section>
-			
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<header class="major">
-				  <h2>WHAT WE STAND FOR</h2>
-</header>
-				<div class="container">
-					<div class="row">
-						<div class="6u">
-							<section class="special">
-								<a href="#" class="image fit"><img src="images/IMG_1706.jpg" width="400" height="300" alt="Environmental Impact" /></a>
-								
-							  <div class="align-left">
-								  <h3>environmental impact</h3>
-								<p>Acadia is committed to:</p>
-								  <ul>
-									  <li>Achieving and maintaining carbon neutrality in all operations.</li>
-									  <li>Demonstrating environmental stewardship through responsible resource management and waste reduction.</li>
-									  <li>Incorporating sustainable design principles to minimize environmental impact.</li>
-								  </ul>
-								</div>
-</section>
-						</div>
-						<div class="6u">
-							<section class="special">
-								<a href="#" class="image fit"><img src="images/DEI.jpeg" width="400" height="300" alt="Diversity, Equity, and Inclusion" /></a>
-								
-							  <div class="align-left">
-								  <h3>Diversity Equity and Inclusion</h3>
-								<p>We are dedicated to:</p>
-									<ul>
-										<li>Promoting fairness and equal opportunity in all aspects of our operations, ensuring that every individual has access to the resources and opportunities they need to succeed.</li>
-										<li>Celebrating diversity by actively seeking out and welcoming people of different backgrounds, identities, and experiences.</li>
-										<li>Fostering an inclusive culture where all voices are heard and respected, and where every employee feels empowered to bring their authentic selves to work.</li>
-									</ul>
-								</div>
-                          </section>
-						</div>
-					</div>
-				</div>
+    
+  </div>
+</div>
+
+<div class="section" id="section3">
+    <img src="images/ld5.jpeg" alt="Active Transportation">
+    <div class="overlay3">
+        <h2>Commercial & Mixed Use</h2>
+					<li>Zoning & Land Use Assessments – Identify permitted uses and opportunities for mixed-use development.</li>
+                    <li>Site Servicing & Utility Design – Scalable systems for retail, office, and mixed-use spaces.</li>
+                    <li>Traffic Impact Assessments & Parking Planning – Optimize customer access and site flow.</li>
+                    <li>Stormwater & Wastewater Management – Custom drainage solutions for commercial sites.</li>
+					<li>Permit & Regulatory Approvals – Streamline the development process from initial concept to final build.</li>
+                </ul>
+  </div>
+</div>
+<div class="section" id="section3">
+    <img src="images/ld6.jpeg" alt="Active Transportation">
+    <div class="overlay3">
+        <h2>Industrial</h2>
+					<li>Site Planning & Layout Design – Optimize logistics, vehicle flow, and site efficiency.</li>
+                    <li>Heavy-Duty Servicing Design – High-capacity water, sewer, hydro, and gas systems.</li>
+                    <li>Traffic & Freight Movement Studies – Ensure safe and efficient truck access and circulation.</li>
+                    <li>Stormwater & Spill Containment Systems – Design systems for industrial runoff and hazardous materials.</li>
+					<li>Permit & Approval Management – Navigate zoning, environmental, and building permit processes.</li>
+                </ul>
+  </div>
+</div>
+
+</body>
 			</section>
 
 		
