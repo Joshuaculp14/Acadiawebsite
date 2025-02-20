@@ -1494,15 +1494,16 @@ body2 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/water1.jpeg') center/cover no-repeat; /* Gradient added */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/water2.jpeg') center/cover no-repeat; /* Gradient added */
 }
 
 /* Content Styling */
 .glass-content2 {
     padding: 4rem 5rem;
     text-align: center;
-    color: #ffffff;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+    color: #080807;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+	
 }
 
 /* Buttons */
@@ -1510,7 +1511,7 @@ body2 {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     padding: 12px 24px;
-    color: white;
+    color: 322827;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -1524,9 +1525,9 @@ h6.custom-h6 {
     font-size: 1rem; /* Adjust size if needed */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #000000; /* Soft white */
+    color: #322827; /* Soft white */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
-    background: rgba(255, 255, 255, 0.1); /* Slight glass effect */
+    background: rgba(255, 255, 255, 0.5); /* Slight glass effect */
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1535,6 +1536,38 @@ h6.custom-h6 {
     display: inline-block;
     margin-bottom: 1rem;
 }/* Custom h6 for Glassmorphism */
+/* Styled Paragraph with Glass Effect */
+p.glass-paragraph {
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* White border */
+    color: #322827; /* Matching text color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Light shadow for depth */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: inline-block;
+    margin: 0.5rem 0;
+    max-width: 90%; /* Keeps the paragraph from stretching too wide */
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+h1.custom-h1 {
+    font-size: 1rem; /* Adjust size if needed */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #322827; /* Soft white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
+    background: rgba(255, 255, 255, 0.5); /* Slight glass effect */
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: inline-block;
+    margin-bottom: 1rem;
+}/* Custom h6 for Glassmorphism */
+
 h4.custom-h4 {
     font-size: 1rem; /* Adjust size if needed */
     letter-spacing: 1.5px;
