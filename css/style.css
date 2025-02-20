@@ -1423,7 +1423,86 @@ body2 {
     border-radius: 8px;
     z-index: 10; /* Ensures it stays visible */
 }
+ /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
 
+        /* Navbar Glass Effect */
+        #header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Glass Effect for Banners */
+        .glass-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('../images/inno1.jpeg') center/cover no-repeat;
+        }
+
+        .glass-content {
+            padding: 2rem 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        /* Buttons */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .glass-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+/* Glass Card Styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    color: #cfb06e; /* Text Color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings and Text */
+.glass-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cfb06e; /* Text Color */
+}
+
+.glass-card p {
+    font-size: 0.95em;
+}
 
 /* Footer */
 
