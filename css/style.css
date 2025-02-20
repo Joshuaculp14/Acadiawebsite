@@ -1435,7 +1435,7 @@ body2 {
 
         /* Navbar Glass Effect */
         #header {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -1447,7 +1447,7 @@ body2 {
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('../images/inno1.jpeg') center/cover no-repeat;
+            background: url('../images/inno6.jpeg') center/cover no-repeat;
         }
 
         .glass-content {
@@ -1479,12 +1479,23 @@ body2 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
-
-/* Navbar Glass Effect */
-#header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+/* Glassmorphism Effect2 */
+.glass3 {
+    background: rgba(0, 0, 0, 0.7); /* Increased opacity */
+    border-radius: 16px;
+    backdrop-filter: blur(8px); /* Stronger blur for contrast */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+/* Glassmorphism Effect2 */
+.glass4 {
+    background: rgba(0, 0, 0, 0.7); /* Increased opacity */
+    border-radius: 16px;
+    backdrop-filter: blur(8px); /* Stronger blur for contrast */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Glass Effect for Banners */
@@ -1518,6 +1529,75 @@ body2 {
 }
 
 .glass-btn2:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Glass Effect for Banners */
+.glass-banner3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border-radius: 16px;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/inno9.jpeg') center/cover no-repeat; /* Gradient added */
+}
+
+/* Content Styling */
+.glass-content3 {
+    padding: 4rem 5rem;
+    text-align: center;
+    color: #080807;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+	
+}
+
+/* Buttons */
+.glass-btn3 {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 12px 24px;
+    color: 322827;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.glass-btn3:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+/* Glass Effect for Banners */
+.glass-banner4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+	border-radius: 16px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/inno10.jpeg') center/cover no-repeat; /* Gradient added */
+}
+
+/* Content Styling */
+.glass-content4 {
+    padding: 4rem 5rem;
+    text-align: center;
+    color: #080807;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+	
+}
+
+/* Buttons */
+.glass-btn4 {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 12px 24px;
+    color: 322827;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.glass-btn4:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 /* Custom h6 for Glassmorphism */
@@ -1583,6 +1663,21 @@ h4.custom-h4 {
     display: inline-block;
     margin-bottom: 1rem;
 }
+h4.custom-h42 {
+    font-size: 1rem; /* Adjust size if needed */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #080807; /* Soft white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
+    background: rgba(255, 255, 255, 0.1); /* Slight glass effect */
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
 /* Glass Card Styling */
 .glass-card {
     background: rgba(255, 255, 255, 0.15);
@@ -1610,7 +1705,32 @@ h4.custom-h4 {
     color: #cfb06e; /* Text Color */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.glass-card3 {
+    background: #41576c;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    color: #080807; /* Text Color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card4 {
+    background: #41576c;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    color: #080807; /* Text Color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 /* Hover Effect */
 .glass-card:hover {
     transform: translateY(-10px);
