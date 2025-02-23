@@ -15,7 +15,7 @@ body2 {
 }
 
 	body, input, select, textarea {
-		color: #555f66;
+		color: #41576C;
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 14pt;
 		font-weight: 300;
@@ -1472,14 +1472,14 @@ body2 {
         }
 /* Glassmorphism Effect2 */
 .glass2 {
-    background: rgba(0, 0, 0, 0.7); /* Increased opacity */
+    background: rgba(0, 0, 0, 0.8); /* Increased opacity */
     border-radius: 16px;
     backdrop-filter: blur(8px); /* Stronger blur for contrast */
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
-/* Glassmorphism Effect2 */
+/* Glassmorphism Effect3 */
 .glass3 {
     background: rgba(0, 0, 0, 0.7); /* Increased opacity */
     border-radius: 16px;
@@ -1488,7 +1488,7 @@ body2 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
-/* Glassmorphism Effect2 */
+/* Glassmorphism Effect4 */
 .glass4 {
     background: rgba(0, 0, 0, 0.7); /* Increased opacity */
     border-radius: 16px;
@@ -1505,14 +1505,14 @@ body2 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/water2.jpeg') center/cover no-repeat; /* Gradient added */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../images/water2.jpeg') center/cover no-repeat; /* Gradient added */
 }
 
 /* Content Styling */
 .glass-content2 {
     padding: 4rem 5rem;
     text-align: center;
-    color: #080807;
+    color: #183eb6;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 	
 }
@@ -1605,7 +1605,7 @@ h6.custom-h6 {
     font-size: 1rem; /* Adjust size if needed */
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #322827; /* Soft white */
+    color: #1246eb; /* Soft white */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
     background: rgba(255, 255, 255, 0.5); /* Slight glass effect */
     padding: 8px 16px;
@@ -1622,7 +1622,7 @@ p.glass-paragraph {
     padding: 12px 20px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2); /* White border */
-    color: #322827; /* Matching text color */
+    color: #1246eb; /* Matching text color */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Light shadow for depth */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -1639,6 +1639,21 @@ h1.custom-h1 {
     color: #322827; /* Soft white */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
     background: rgba(255, 255, 255, 0.5); /* Slight glass effect */
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: inline-block;
+    margin-bottom: 1rem;
+}/* Custom h6 for Glassmorphism */
+h2.custom-h2 {
+    font-size: 3.5em; /* Adjust size if needed */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #cfb06e; /* Acadia Gold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle depth */
+    background: rgba(65, 87, 108, 1); /* Slight glass effect */
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
