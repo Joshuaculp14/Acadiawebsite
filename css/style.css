@@ -1765,6 +1765,90 @@ h4.custom-h42 {
     font-size: 0.95em;
 }
 
+/* === MOBILE-ONLY FIXES FOR TRANSPORTATION ENGINEERING === */
+@media (max-width: 480px) {
+
+    /* Navigation Bar Fix (text color) */
+    .dropdown-menu li a {
+        color: black !important; /* Ensures contrast */
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 1px solid #ccc;
+        width: 100%;
+        text-align: center;
+        position: static; /* Prevent overlap */
+    }
+
+    /* Reinstate bullet lists for Transportation Engineering on mobile */
+    /* Use a unique wrapper or class, e.g. .section or .transportation-section */
+    /* So we only affect the Transportation Engineering page. */
+    .transportation-section ul {
+        display: block !important;
+        padding-left: 20px;
+        list-style: disc;
+        color: #fff;
+    }
+
+    /* Make headings gold and underlined, similar to Municipal Eng. on mobile */
+    .transportation-section h5,
+    .transportation-section h6 {
+        display: block !important;
+        text-align: center;
+        color: #cfb06e !important;
+        text-decoration: underline;
+        margin: 10px 0;
+    }
+
+    /* Tweak heading sizes for better mobile readability */
+    .transportation-section h5 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .transportation-section h6 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    /* Dark overlay behind headings and lists for readability */
+    .transportation-section .overlay2,
+    .transportation-section .overlay3 {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6); /* Doesn’t affect desktop/tablet */
+    }
+}
+@media (max-width: 480px) {
+    /* Override for Expertise dropdown on mobile */
+    .dropdown-menu.center-align {
+        left: 0 !important;       /* Position from left */
+        transform: none !important; /* Disable translateX(-50%) */
+        width: 100% !important;  /* Let it fill the screen width */
+        text-align: center;      /* Keep the items centered if desired */
+    }
+}
+@media (max-width: 480px) {
+    /* Hide the video on mobile */
+    #banner video {
+        display: none;
+    }
+
+    /* Replace video background with a static image */
+    #banner {
+        background: url("../images/inno3.jpeg") center/cover no-repeat;
+    }
+
+    /* Resize the logo */
+    #banner .inner img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+
+
 /* Footer */
 
 	#footer {
