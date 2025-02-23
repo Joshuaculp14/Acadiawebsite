@@ -1830,22 +1830,27 @@ h4.custom-h42 {
     }
 }
 @media (max-width: 480px) {
-    /* Hide the video on mobile */
+    /* Scale the video to fit mobile width */
     #banner video {
-        display: none;
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Preserves aspect ratio, crops excess if needed */
     }
 
-    /* Replace video background with a static image */
+    /* Adjust the banner height (if you previously had a fixed height) */
     #banner {
-        background: url("../images/inno3.jpeg") center/cover no-repeat;
-    }
-
-    /* Resize the logo */
-    #banner .inner img {
-        max-width: 80%;
         height: auto;
     }
+
+    /* Scale the logo proportionally with the video */
+    #banner .inner img {
+        max-width: 60%; /* Adjust as desired (e.g., 50%, 80%) */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Centers the logo if needed */
+    }
 }
+
 
 
 
