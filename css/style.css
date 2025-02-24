@@ -1765,125 +1765,6 @@ h4.custom-h42 {
     font-size: 0.95em;
 }
 
-/* === MOBILE-ONLY FIXES FOR TRANSPORTATION ENGINEERING === */
-@media (max-width: 480px) {
-
-    /* Navigation Bar Fix (text color) */
-    .dropdown-menu li a {
-        color: black !important; /* Ensures contrast */
-        text-align: center;
-        padding: 10px 15px;
-    }
-
-    .dropdown-menu {
-        background-color: rgba(255, 255, 255, 0.95);
-        border: 1px solid #ccc;
-        width: 100%;
-        text-align: center;
-        position: static; /* Prevent overlap */
-    }
-
-    /* Reinstate bullet lists for Transportation Engineering on mobile */
-    /* Use a unique wrapper or class, e.g. .section or .transportation-section */
-    /* So we only affect the Transportation Engineering page. */
-    .transportation-section ul {
-        display: block !important;
-        padding-left: 20px;
-        list-style: disc;
-        color: #fff;
-    }
-
-    /* Make headings gold and underlined, similar to Municipal Eng. on mobile */
-    .transportation-section h5,
-    .transportation-section h6 {
-        display: block !important;
-        text-align: center;
-        color: #cfb06e !important;
-        text-decoration: underline;
-        margin: 10px 0;
-    }
-
-    /* Tweak heading sizes for better mobile readability */
-    .transportation-section h5 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-    .transportation-section h6 {
-        font-size: 1.2em;
-        margin-bottom: 5px;
-    }
-
-    /* Dark overlay behind headings and lists for readability */
-    .transportation-section .overlay2,
-    .transportation-section .overlay3 {
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.6); /* Doesn’t affect desktop/tablet */
-    }
-}
-@media (max-width: 480px) {
-    /* Override for Expertise dropdown on mobile */
-    .dropdown-menu.center-align {
-        left: 0 !important;       /* Position from left */
-        transform: none !important; /* Disable translateX(-50%) */
-        width: 100% !important;  /* Let it fill the screen width */
-        text-align: center;      /* Keep the items centered if desired */
-    }
-}
-@media (max-width: 480px) {
-    /* Scale the video to fit mobile width */
-    #banner video {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Preserves aspect ratio, crops excess if needed */
-    }
-
-    /* Adjust the banner height (if you previously had a fixed height) */
-    #banner {
-        height: auto;
-    }
-
-    /* Scale the logo proportionally with the video */
-    #banner .inner img {
-        max-width: 60%; /* Adjust as desired (e.g., 50%, 80%) */
-        height: auto;
-        display: block;
-        margin: 0 auto; /* Centers the logo if needed */
-    }
-}
-/* === Fix: Remove Dark Full-Screen Nav Background on Mobile === */
-@media (max-width: 480px) {
-    /* Remove any background from the entire nav */
-    #nav,
-    #nav ul,
-    .dropdown-menu {
-        background: #41576C !important; /* Override any existing background */
-        border: none !important;     /* Remove extra borders if desired */
-        position: static !important; /* Prevent covering the whole screen */
-        width: auto !important;      /* Shrink to fit its content */
-        height: auto !important;
-    }
-    
-    /* Ensure nav links are visible and well-spaced */
-    .dropdown-menu li a {
-        display: block; 
-        background: none !important;
-        text-align: center;
-        padding: 10px 15px;
-        color: black !important;  /* If you want them black for contrast */
-    }
-
-    /* If you want a small background behind *just* the dropdown items */
-    /* .dropdown-menu li a {
-        background: rgba(255,255,255,0.95);
-        color: #000;
-    } */
-
-    /* Constrain the nav if it's too tall; add scroll if needed */
-    #nav ul {
-        max-height: 400px; /* or any suitable height */
-        overflow-y: auto;
-    }
-}
 @media (max-width: 480px) {
     /* Force mobile nav text color to #cfb06e */
     .dropdown-menu li a {
@@ -1901,58 +1782,56 @@ h4.custom-h42 {
         font-size: 6vw !important; /* Slightly smaller for tiny devices */
     }
 }
-/* === MOBILE NAVIGATION FIX === */
-@media (max-width: 480px) {
+/* Style for Dropdowns - Hidden by Default */
+#nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #41576C; /* Acadia Blue */
+    z-index: 1000;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
 
-    /* Stack navigation links vertically */
+/* Show dropdown on hover OR when active */
+#nav .dropdown:hover > .dropdown-menu,
+#nav .dropdown.active > .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Items */
+#nav .dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+#nav .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #cfb06e;
+    white-space: nowrap;
+}
+
+#nav .dropdown-menu li a:hover {
+    background-color: #2f3e4c;
+}
+
+/* Mobile View: Stack Items Vertically */
+@media (max-width: 768px) {
     #nav ul {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav li {
         width: 100%;
-        background-color: #41576C; /* Matches your color scheme */
-        padding: 0;
-        margin: 0;
-        text-align: center;
     }
 
-    /* Style for each navigation link */
-    #nav ul li {
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid #fff; /* Optional: add separator between items */
-    }
-
-    #nav ul li a {
-        display: block;
-        padding: 12px 0;
-        color: #cfb06e; /* Gold color for links */
-        text-decoration: none;
-    }
-
-    /* Ensure dropdown menus are fully visible */
     .dropdown-menu {
-        display: none; /* Hide dropdowns initially */
-        position: static;
-        background-color: #41576C;
         width: 100%;
-    }
-
-    /* Show dropdown when hovering or toggling */
-    #nav ul li:hover > .dropdown-menu,
-    #nav ul li:focus-within > .dropdown-menu {
-        display: block;
-    }
-
-    /* Make hamburger button visible on mobile */
-    .nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.8em;
-        color: #cfb06e;
-        cursor: pointer;
-        position: absolute;
-        right: 1.5em;
-        top: 0.4em;
+        position: static;
     }
 }
 
