@@ -173,7 +173,40 @@ body2 {
     position: relative;
     /* other styles as needed */
 }
+/* Apply specific styles for each section */
+#section1 img,
+#section2 img,
+#section3 img {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; /* Ensures full viewport height */
+    object-fit: cover; /* Maintains aspect ratio */
+}
 
+/* Ensure the section container itself takes up full height */
+#section1,
+#section2,
+#section3 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+/* Overlay fix to align content properly */
+#section1 .overlay3,
+#section2 .overlay3,
+#section3 .overlay3 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
 
 .section img {
     width: 100%;
@@ -1790,20 +1823,33 @@ h4.custom-h42 {
 	#nav .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #41576C; /* Acadia Blue */
+    background-color: #042e41; /* Acadia Blue */
     z-index: 1000;
     width: 200px;
     max-height: 300px;
     overflow-y: auto;
     border-radius: 5px;
 	-webkit-overflow-scrolling: touch; /* Smooth touch scroll */
+	left: 0; /* Align dropdown with parent */
+        transform: none; /* Remove shifting */
+        width: auto; /* Keeps existing width */
+        min-width: 200px; /* Keeps dropdown from collapsing */
+        max-width: 100%; /* Ensures it stays on screen */
+        box-sizing: border-box; /* Keeps padding inside */
 	}
+	  /* Nested Dropdown Background */
+    #nav .dropdown-menu .dropdown-menu {
+        background-color: #033f6d !important; /* Nested Color */
+    }
 }
 /* Show dropdown on hover OR when active */
 @media (max-width: 480px){
 	#nav .dropdown:hover > .dropdown-menu,
 	#nav .dropdown.active > .dropdown-menu {
     display: block;
+	position: static; /* Prevent it from going off-screen */
+    max-height: none; /* No height limit */
+    overflow: visible; /* Show all items */
 	}
 }
  /* Remove scrollbar but keep finger scrolling */
@@ -1812,6 +1858,7 @@ h4.custom-h42 {
         width: 0; /* Remove scrollbar */
         background: transparent;
     }
+	  
 }
 /* Dropdown Items */
 @media (max-width: 480px){
