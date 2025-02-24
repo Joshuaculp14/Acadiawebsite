@@ -1774,7 +1774,10 @@ h4.custom-h42 {
 @media (max-width: 480px) {
     /* Force ALL nav links (top-level + dropdowns) to #cfb06e */
     #nav ul li a {
-        color: #cfb06e !important;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+		color: #cfb06e !important;
     }
 }
 @media (max-width: 480px) {
@@ -1782,11 +1785,56 @@ h4.custom-h42 {
         font-size: 6vw !important; /* Slightly smaller for tiny devices */
     }
 }
-/* === MOBILE DROPDOWN FIX FOR MAX-WIDTH 480PX === */
-@media (max-width: 480px) {
+/* Style for Dropdowns - Hidden by Default */
+#nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #41576C; /* Acadia Blue */
+    z-index: 1000;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+	-webkit-overflow-scrolling: touch; /* Smooth touch scroll */
+}
 
-    /* Stack navigation items vertically */
-    #nav ul {
+/* Show dropdown on hover OR when active */
+#nav .dropdown:hover > .dropdown-menu,
+#nav .dropdown.active > .dropdown-menu {
+    display: block;
+}
+ /* Remove scrollbar but keep finger scrolling */
+    .dropdown-menu::-webkit-scrollbar {
+        width: 0; /* Remove scrollbar */
+        background: transparent;
+    }
+/* Dropdown Items */
+#nav .dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+#nav .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #cfb06e;
+    white-space: nowrap;
+}
+
+#nav .dropdown-menu li a:hover {
+    background-color: #2f3e4c;
+}
+ #nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+/* Mobile View: Stack Items Vertically */
+@media (max-width: 768px) {
+     #nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1794,55 +1842,13 @@ h4.custom-h42 {
         margin: 0;
     }
 
-    /* Style parent nav links */
-    #nav ul li {
-        display: block;
+    #nav li {
         width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #ccc;
     }
 
-    #nav ul li a {
-        display: block;
-        padding: 12px;
-        text-decoration: none;
-        color: #cfb06e; /* Acadia Gold */
-    }
-
-    /* Nested dropdown menu - hidden by default */
     .dropdown-menu {
-        display: none;
-        position: static;
-        background-color: #41576C;
         width: 100%;
-        max-height: 200px;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* Enable smooth touch scroll */
-    }
-
-    /* Show dropdown when active */
-    .dropdown.active > .dropdown-menu {
-        display: block;
-    }
-
-    /* Center align dropdown items */
-    .dropdown-menu li {
-        text-align: center;
-    }
-
-    .dropdown-menu li a {
-        padding: 10px;
-        color: #cfb06e;
-    }
-
-    /* Scrollbar for dropdowns */
-    .dropdown-menu::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .dropdown-menu::-webkit-scrollbar-thumb {
-        background-color: #888;
-        border-radius: 3px;
+        position: static;
     }
 }
 /* Footer */
