@@ -1901,6 +1901,60 @@ h4.custom-h42 {
         font-size: 6vw !important; /* Slightly smaller for tiny devices */
     }
 }
+/* === MOBILE NAVIGATION FIX === */
+@media (max-width: 480px) {
+
+    /* Stack navigation links vertically */
+    #nav ul {
+        display: block;
+        width: 100%;
+        background-color: #41576C; /* Matches your color scheme */
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Style for each navigation link */
+    #nav ul li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #fff; /* Optional: add separator between items */
+    }
+
+    #nav ul li a {
+        display: block;
+        padding: 12px 0;
+        color: #cfb06e; /* Gold color for links */
+        text-decoration: none;
+    }
+
+    /* Ensure dropdown menus are fully visible */
+    .dropdown-menu {
+        display: none; /* Hide dropdowns initially */
+        position: static;
+        background-color: #41576C;
+        width: 100%;
+    }
+
+    /* Show dropdown when hovering or toggling */
+    #nav ul li:hover > .dropdown-menu,
+    #nav ul li:focus-within > .dropdown-menu {
+        display: block;
+    }
+
+    /* Make hamburger button visible on mobile */
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8em;
+        color: #cfb06e;
+        cursor: pointer;
+        position: absolute;
+        right: 1.5em;
+        top: 0.4em;
+    }
+}
 
 /* Footer */
 
