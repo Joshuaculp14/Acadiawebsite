@@ -168,13 +168,12 @@ body2 {
 		text-align: center;
 	}
 .section {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    min-height: 100vh;  /* or height: auto; if you just want it to size itself */
     position: relative;
+    /* other styles as needed */
 }
+
 
 .section img {
     width: 100%;
@@ -478,8 +477,8 @@ body2 {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #192024;
-			border-color: #192024;
+			background: #41576C;
+			border-color: #41576C;
 			color: #ffffff;
 			content: '\f00c';
 		}
@@ -869,7 +868,7 @@ body2 {
 		-o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #192024;
+		background-color: #41576C;
 		border-radius: 6px;
 		border: 0;
 		color: #ffffff !important;
@@ -1423,6 +1422,7 @@ body2 {
     border-radius: 8px;
     z-index: 10; /* Ensures it stays visible */
 }
+
  /* Glassmorphism Effect */
         .glass {
             background: rgba(255, 255, 255, 0.2);
@@ -1850,9 +1850,57 @@ h4.custom-h42 {
         margin: 0 auto; /* Centers the logo if needed */
     }
 }
+/* === Fix: Remove Dark Full-Screen Nav Background on Mobile === */
+@media (max-width: 480px) {
+    /* Remove any background from the entire nav */
+    #nav,
+    #nav ul,
+    .dropdown-menu {
+        background: #41576C !important; /* Override any existing background */
+        border: none !important;     /* Remove extra borders if desired */
+        position: static !important; /* Prevent covering the whole screen */
+        width: auto !important;      /* Shrink to fit its content */
+        height: auto !important;
+    }
+    
+    /* Ensure nav links are visible and well-spaced */
+    .dropdown-menu li a {
+        display: block; 
+        background: none !important;
+        text-align: center;
+        padding: 10px 15px;
+        color: black !important;  /* If you want them black for contrast */
+    }
 
+    /* If you want a small background behind *just* the dropdown items */
+    /* .dropdown-menu li a {
+        background: rgba(255,255,255,0.95);
+        color: #000;
+    } */
 
-
+    /* Constrain the nav if it's too tall; add scroll if needed */
+    #nav ul {
+        max-height: 400px; /* or any suitable height */
+        overflow-y: auto;
+    }
+}
+@media (max-width: 480px) {
+    /* Force mobile nav text color to #cfb06e */
+    .dropdown-menu li a {
+        color: #cfb06e !important;
+    }
+}
+@media (max-width: 480px) {
+    /* Force ALL nav links (top-level + dropdowns) to #cfb06e */
+    #nav ul li a {
+        color: #cfb06e !important;
+    }
+}
+@media (max-width: 480px) {
+    h2, .corporate-governance-section h2 {
+        font-size: 6vw !important; /* Slightly smaller for tiny devices */
+    }
+}
 
 /* Footer */
 
