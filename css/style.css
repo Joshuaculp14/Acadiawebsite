@@ -1211,7 +1211,15 @@ body2 {
     transform: translate(-50%, -50%);
 	display: block;
 }
-
+@media (max-width: 768px) {
+    #banner-video {
+        width: auto; /* Full viewport width */
+        height: auto; /* Maintain aspect ratio */
+        top: 0;
+        left: 0;
+        transform: none; /* Remove translate for simpler positioning */
+    }
+}
 #banner:before {
     content: '';
     position: absolute;
@@ -1260,20 +1268,6 @@ body2 {
 #banner .logo-container img {
     max-width: 100%;
     height: auto;
-}
-#banner-image {
-    display: none;
-    width: 100%;
-    height: auto;
-}
-@media (max-width: 768px) {
-    #banner-video {
-        display: none; /* Hide video on mobile */
-    }
-
-    #banner-image {
-        display: block; /* Show image on mobile */
-    }
 }
 
 .image-container {
