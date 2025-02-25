@@ -1916,6 +1916,12 @@ h4.custom-h42 {
         margin: 0 auto; /* Center the logo */
     }
 }
+@media (max-width: 768px) {
+    .parallax-bg, .parallax-bg2, .parallax-bg3, .parallax-bg4 {
+        background-attachment: scroll; /* Removes parallax effect on mobile */
+        background-position: center;
+    }
+}
 /* Footer */
 
 	#footer {
