@@ -1418,6 +1418,14 @@ body2 {
 	background: transparent !important;
 	 z-index: 1; /* Lower than header */
 }
+/* Parallax Banner8 */
+.parallax-banner8 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+	 z-index: 1; /* Lower than header */
+}
 /* Background Image */
 .parallax-bg {
     position: absolute;
@@ -1505,6 +1513,19 @@ body2 {
     width: 100%;
     height: 100%;
     background-image: url('../images/water1.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/career3.jpeg') !important; /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
@@ -2007,7 +2028,7 @@ h4.custom-h42 {
     }
 }
 @media (max-width: 760px) {
-    .parallax-bg, .parallax-bg2, .parallax-bg3, .parallax-bg4, .parallax-bg5, .parallax-bg6, .parallax-bg7 {
+    .parallax-bg, .parallax-bg2, .parallax-bg3, .parallax-bg4, .parallax-bg5, .parallax-bg6, .parallax-bg7, .parallax-bg8 {
         background-attachment: scroll; /* Removes parallax effect on mobile */
         background-position: center;
     }
