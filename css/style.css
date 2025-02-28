@@ -1369,6 +1369,7 @@ body2 {
     height: 80vh; /* Adjust as needed */
     overflow: hidden;
 	background: transparent !important;
+	 z-index: 1; /* Lower than header */
 }
 /* Parallax Banner2 */
 .parallax-banner2 {
@@ -1376,6 +1377,7 @@ body2 {
     height: 80vh; /* Adjust as needed */
     overflow: hidden;
 	background: transparent !important;
+	 z-index: 1; /* Lower than header */
 }
 /* Parallax Banner3 */
 .parallax-banner3 {
@@ -1383,6 +1385,7 @@ body2 {
     height: 80vh; /* Adjust as needed */
     overflow: hidden;
 	background: transparent !important;
+	 z-index: 1; /* Lower than header */
 }
 /* Parallax Banner4 */
 .parallax-banner4 {
@@ -1390,6 +1393,7 @@ body2 {
     height: 80vh; /* Adjust as needed */
     overflow: hidden;
 	background: transparent !important;
+	 z-index: 1; /* Lower than header */
 }
 
 /* Background Image */
@@ -1490,6 +1494,7 @@ body2 {
             justify-content: center;
             height: 100vh;
             background: url('../images/inno6.jpeg') center/cover no-repeat;
+			 z-index: 1; /* Lower than header */
         }
 
         .glass-content {
@@ -1548,6 +1553,7 @@ body2 {
     justify-content: center;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../images/water2.jpeg') center/cover no-repeat; /* Gradient added */
+	 z-index: 1; /* Lower than header */
 }
 
 /* Content Styling */
@@ -1583,6 +1589,7 @@ body2 {
 	border-radius: 16px;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/inno9.jpeg') center/cover no-repeat; /* Gradient added */
+	 z-index: 1; /* Lower than header */
 }
 
 /* Content Styling */
@@ -1617,6 +1624,7 @@ body2 {
     height: 100vh;
 	border-radius: 16px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../images/inno10.jpeg') center/cover no-repeat; /* Gradient added */
+	 z-index: 1; /* Lower than header */
 }
 
 /* Content Styling */
@@ -1806,7 +1814,19 @@ h4.custom-h42 {
 .glass-card p {
     font-size: 0.95em;
 }
+@media (max-width: 760px) {
+    /* Adjusts the flex layout for smaller screens */
+    .glass2 div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    .glass-card2 {
+        width: 90%; /* Makes each card take up nearly full width */
+        max-width: 300px; /* Prevents them from getting too large */
+        margin: 10px auto; /* Adds spacing between stacked elements */
+    }
+}
 @media (max-width: 480px) {
     /* Force mobile nav text color to #cfb06e */
     .dropdown-menu li a {
@@ -1899,7 +1919,7 @@ h4.custom-h42 {
     }
 }
 /* Mobile View: Stack Items Vertically */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
      #nav ul {
         display: flex;
         flex-direction: column;
@@ -1925,12 +1945,69 @@ h4.custom-h42 {
         margin: 0 auto; /* Center the logo */
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .parallax-bg, .parallax-bg2, .parallax-bg3, .parallax-bg4 {
         background-attachment: scroll; /* Removes parallax effect on mobile */
         background-position: center;
     }
 }
+        @media (max-width: 760px) {
+            .transport-section {
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
+            .transport-section img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;.imige.fit
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(50%);
+            }
+            .overlay2 {
+                position: relative;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 8px;
+                width: 90%;
+                color: white;
+            }
+            .overlay2 h5 {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+            }
+            .columns-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .column h6 {
+                font-size: 1.4em;
+                margin-top: 15px;
+                color: #cfb06e;
+            }
+            .column ul {
+                list-style: none;
+                padding: 0;
+                text-align: left;
+            }
+            .column ul li {
+                padding: 5px 0;
+                font-size: 1.1em;
+            }
+        }
 /* Footer */
 
 	#footer {
