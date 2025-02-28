@@ -12,6 +12,13 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth <= 760) {
+            window.location.href = "Sustainability-mobile.html"; // Change to your mobile HTML page
+        }
+    });
+</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
