@@ -1200,7 +1200,6 @@ body2 {
     text-align: center;
     padding: 0;
 }
-
 #banner video {
     position: absolute;
     top: 50%;
@@ -1395,7 +1394,30 @@ body2 {
 	background: transparent !important;
 	 z-index: 1; /* Lower than header */
 }
-
+/* Parallax Banner5 */
+.parallax-banner5 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+	 z-index: 1; /* Lower than header */
+}
+/* Parallax Banner6 */
+.parallax-banner6 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+	 z-index: 1; /* Lower than header */
+}
+/* Parallax Banner7 */
+.parallax-banner7 {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    overflow: hidden;
+	background: transparent !important;
+	 z-index: 1; /* Lower than header */
+}
 /* Background Image */
 .parallax-bg {
     position: absolute;
@@ -1444,6 +1466,45 @@ body2 {
     width: 100%;
     height: 100%;
     background-image: url('../images/pm1.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/career1.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/career2.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Enables Parallax Effect */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.parallax-bg7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/water1.jpeg') !important; /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Enables Parallax Effect */
