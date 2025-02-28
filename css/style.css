@@ -645,7 +645,9 @@ body2 {
 
 			.image.fit img {
 				display: block;
-				width: 100%;
+   				 width: 100%;
+    				height: 800px;
+   				 object-fit: cover;
 			}
 		.image-label-container {
 			position: relative;
@@ -1947,7 +1949,7 @@ h4.custom-h42 {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 100%;.imige.fit
                 height: 100%;
                 object-fit: cover;
                 filter: brightness(50%);
