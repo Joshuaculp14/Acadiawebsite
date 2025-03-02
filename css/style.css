@@ -1130,6 +1130,7 @@ body2 {
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
+
 		}
 
 			#header nav > ul {
@@ -1935,7 +1936,7 @@ h4.custom-h42 {
     display: none;
     position: absolute;
     background-color: #042e41; /* Acadia Blue */
-    z-index: 1000;
+    z-index: 9999;
     width: 200px;
     max-height: 300px;
     overflow-y: auto;
