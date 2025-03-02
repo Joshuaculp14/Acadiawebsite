@@ -1,46 +1,49 @@
 // JavaScript Document
-// JavaScript Document
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let dropdowns = document.querySelectorAll(".dropdown > a");
-    let navMenu = document.querySelector("#nav"); // Adjust if necessary
+    let navMenu = document.querySelector("#nav"); // Update if necessary
     let hamburger = document.querySelector(".hamburger"); // Your hamburger button
 
     dropdowns.forEach(link => {
-        link.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent link jump
-            let menu = this.nextElementSibling; // The dropdown menu
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent link from navigating
 
-            // Toggle only this menu
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
+            let menu = this.nextElementSibling; // Get the dropdown menu
+
+            // Check if it's already open
+            let isOpen = menu.style.display === "block";
+
+            // Close all dropdowns first
+            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
+
+            // Toggle only the clicked menu
+            if (!isOpen) {
                 menu.style.display = "block";
             }
-            
-            // Prevent menu from closing immediately
-            event.stopPropagation();
+
+            event.stopPropagation(); // Stop the event from reaching the document click listener
         });
     });
 
-    // Keep menu open if clicking inside
+    // Prevent menu from closing when clicking inside the dropdown
     document.querySelectorAll(".dropdown-menu").forEach(menu => {
-        menu.addEventListener("click", function(event) {
-            event.stopPropagation(); // Stops menu from closing
+        menu.addEventListener("click", function (event) {
+            event.stopPropagation(); // Stop it from closing
         });
     });
 
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", function(event) {
+    // **Only close if clicking outside of dropdowns**
+    document.addEventListener("click", function (event) {
         if (!event.target.closest(".dropdown") && !event.target.closest(".hamburger")) {
             document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
         }
     });
 
-    // Ensure hamburger menu retains state
+    // **Fix for Hamburger Menu Toggling**
     if (hamburger) {
-        hamburger.addEventListener("click", function(event) {
-            event.stopPropagation(); // Prevent closing on first click
-            navMenu.classList.toggle("active"); // Show/hide menu
+        hamburger.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent accidental menu closing
+            navMenu.classList.toggle("active"); // Show/hide main menu
         });
     }
 });
