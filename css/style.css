@@ -1948,6 +1948,9 @@ h4.custom-h42 {
         min-width: 200px; /* Keeps dropdown from collapsing */
         max-width: 100%; /* Ensures it stays on screen */
         box-sizing: border-box; /* Keeps padding inside */
+		opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
 	}
 	  /* Nested Dropdown Background */
     #nav .dropdown-menu .dropdown-menu {
@@ -1962,6 +1965,9 @@ h4.custom-h42 {
 	position: static; /* Prevent it from going off-screen */
     max-height: none; /* No height limit */
     overflow: visible; /* Show all items */
+		 opacity: 1; /* Ensures smooth transition */
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
 	}
 }
  /* Remove scrollbar but keep finger scrolling */
