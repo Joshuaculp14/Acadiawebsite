@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let parent = this.parentElement;
             let isActive = parent.classList.contains("active");
 
-            // Close all dropdowns
-            document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("active"));
+            // Close all dropdowns EXCEPT the one being clicked
+            document.querySelectorAll(".dropdown").forEach(drop => {
+                if (drop !== parent) {
+                    drop.classList.remove("active");
+                }
+            });
 
             // Toggle only the clicked menu
             if (!isActive) {
@@ -21,16 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Prevent dropdown menu from closing when clicking inside
-    document.querySelectorAll(".dropdown-menu").forEach(menu => {
-        menu.addEventListener("click", function (event) {
-            event.stopPropagation();
+    // ✅ **Fix: Prevent menu from closing when clicking inside dropdown links**
+    document.querySelectorAll(".dropdown-menu a").forEach(menuItem => {
+        menuItem.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents navigation for testing (remove if needed)
+            event.stopPropagation(); // Stops event from closing menu
         });
     });
 
-    // Close all dropdowns if clicking outside
-    document.addEventListener("click", function () {
-        document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("active"));
+    // ✅ **Only close menu when clicking outside, NOT when clicking a menu item**
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".dropdown")) {
+            document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("active"));
+        }
     });
 });
 
