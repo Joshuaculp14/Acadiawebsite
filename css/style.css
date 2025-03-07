@@ -1961,7 +1961,7 @@ h4.custom-h42 {
 @media (max-width: 480px){
 	#nav .dropdown:hover > .dropdown-menu,
 	#nav .dropdown.active > .dropdown-menu {
-    display: none !important;
+    display: block;
 	position: static; /* Prevent it from going off-screen */
     max-height: none; /* No height limit */
     overflow: visible; /* Show all items */
