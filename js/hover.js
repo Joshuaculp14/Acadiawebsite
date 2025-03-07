@@ -1,26 +1,24 @@
 // JavaScript Document
 document.addEventListener("DOMContentLoaded", function () {
-    let dropdowns = document.querySelectorAll(".dropdown > a");
-    let navMenu = document.querySelector("#nav"); // If you have a hamburger or main nav
-    let hamburger = document.querySelector(".hamburger"); // If you have a hamburger button
+    let dropdownLinks = document.querySelectorAll(".dropdown > a");
+    let dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault(); 
-            event.stopPropagation(); // Stop bubbling up
+    // 1. Handle clicks on top-level dropdown links
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // Stop immediate navigation if you want to expand
+            e.stopPropagation(); // Prevent closing everything
 
-            // Find the dropdown menu <ul>
+            // The <ul> directly after <a>
             let menu = this.nextElementSibling;
-            if (!menu) return; // Safety check
+            if (!menu) return;
 
-            // Is the clicked dropdown menu already open?
+            // Is the menu already open?
             let isOpen = (menu.style.display === "block");
 
-            // Close *other* open dropdowns, leave this one alone
-            document.querySelectorAll(".dropdown-menu").forEach(otherMenu => {
-                if (otherMenu !== menu) {
-                    otherMenu.style.display = "none";
-                }
+            // Close all other dropdowns first
+            dropdownMenus.forEach(m => {
+                m.style.display = "none";
             });
 
             // Toggle only this menu
@@ -28,26 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Prevent clicks inside an open dropdown from closing it
-    document.querySelectorAll(".dropdown-menu").forEach(menu => {
-        menu.addEventListener("click", function (event) {
-            event.stopPropagation();
+    // 2. Keep dropdown open when tapping inside the menu
+    dropdownMenus.forEach(menu => {
+        menu.addEventListener("click", function (e) {
+            e.stopPropagation(); // Don’t bubble up to the document listener
         });
     });
 
-    // Close dropdowns if clicking outside
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".dropdown") && !event.target.closest(".hamburger")) {
-            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
-        }
-    });
-
-    // Hamburger toggle (if you have one)
-    if (hamburger) {
-        hamburger.addEventListener("click", function (event) {
-            event.stopPropagation();
-            navMenu.classList.toggle("active"); 
+    // 3. Close all dropdowns when clicking outside
+    document.addEventListener("click", function () {
+        dropdownMenus.forEach(menu => {
+            menu.style.display = "none";
         });
-    }
+    });
 });
-
