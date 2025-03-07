@@ -1130,7 +1130,6 @@ body2 {
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
-
 		}
 
 			#header nav > ul {
@@ -1936,7 +1935,7 @@ h4.custom-h42 {
     display: none;
     position: absolute;
     background-color: #042e41; /* Acadia Blue */
-    z-index: 9999;
+    z-index: 1000;
     width: 200px;
     max-height: 300px;
     overflow-y: auto;
@@ -1948,9 +1947,6 @@ h4.custom-h42 {
         min-width: 200px; /* Keeps dropdown from collapsing */
         max-width: 100%; /* Ensures it stays on screen */
         box-sizing: border-box; /* Keeps padding inside */
-		opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
 	}
 	  /* Nested Dropdown Background */
     #nav .dropdown-menu .dropdown-menu {
@@ -1965,9 +1961,6 @@ h4.custom-h42 {
 	position: static; /* Prevent it from going off-screen */
     max-height: none; /* No height limit */
     overflow: visible; /* Show all items */
-		 opacity: 1; /* Ensures smooth transition */
-        visibility: visible;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
 	}
 }
  /* Remove scrollbar but keep finger scrolling */
