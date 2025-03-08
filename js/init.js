@@ -89,7 +89,7 @@
 					navPanel: {
 						animation: 'pushX',
 						breakpoints: 'medium',
-						clickToHide: true,
+						clickToHide: false,
 						height: '100%',
 						hidden: true,
 						html: '<div data-action="moveElement" data-args="nav"></div>',
