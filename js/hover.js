@@ -1,49 +1,47 @@
-// JavaScript Document
+// nav.js
 document.addEventListener("DOMContentLoaded", function () {
-    // Grab all top-level dropdown links
-    let dropdownLinks = document.querySelectorAll(".dropdown > a");
-    // If you have a hamburger icon, reference it here (optional)
-    let hamburger = document.querySelector(".hamburger"); 
-    let navMenu = document.querySelector("#nav"); 
+  // Grab all top-level dropdown links
+  const dropdownLinks = document.querySelectorAll("#nav .dropdown > a");
+  const navMenu = document.querySelector("#nav");
 
-    dropdownLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();  // Prevent link navigation
+  // (Optional) If you have a hamburger icon
+  const hamburger = document.querySelector(".hamburger");
 
-            let parent = this.parentElement;    // The .dropdown <li>
-            let isActive = parent.classList.contains("active");
+  // Toggle .active for dropdowns on click/tap
+  dropdownLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-            // Close all dropdowns first
-            document.querySelectorAll(".dropdown").forEach(drop => {
-                drop.classList.remove("active");
-            });
+      const parentLi = this.parentElement;
+      const isActive = parentLi.classList.contains("active");
 
-            // Toggle only the clicked one
-            if (!isActive) {
-                parent.classList.add("active");
-            }
+      // Close all dropdowns first
+      document.querySelectorAll("#nav .dropdown").forEach(li => {
+        li.classList.remove("active");
+      });
 
-            // Stop the click from bubbling up (so it won't close right away)
-            event.stopPropagation();
-        });
+      // Toggle only this one
+      if (!isActive) {
+        parentLi.classList.add("active");
+      }
     });
+  });
 
-    // Close all dropdowns if click outside
-    document.addEventListener("click", function (event) {
-        // If user clicks outside any .dropdown
-        if (!event.target.closest(".dropdown") && !event.target.closest(".hamburger")) {
-            document.querySelectorAll(".dropdown").forEach(drop => {
-                drop.classList.remove("active");
-            });
-        }
-    });
-
-    // OPTIONAL: If you have a hamburger or mobile nav toggle
-    if (hamburger) {
-        hamburger.addEventListener("click", function (event) {
-            event.stopPropagation();
-            // Show/hide main menu
-            navMenu.classList.toggle("active");
-        });
+  // Close if user taps outside
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".dropdown") && !event.target.closest(".hamburger")) {
+      document.querySelectorAll("#nav .dropdown").forEach(li => {
+        li.classList.remove("active");
+      });
     }
+  });
+
+  // (Optional) hamburger toggling
+  if (hamburger) {
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      navMenu.classList.toggle("active");
+    });
+  }
 });
