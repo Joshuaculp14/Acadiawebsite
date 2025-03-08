@@ -1304,6 +1304,20 @@ input[type="button"],
         border-bottom: 1px solid #ccc;
     }
 }
+@media (max-width: 480px) {
+  /* disable hover on mobile */
+  #nav .dropdown:hover > .dropdown-menu {
+    display: none !important;
+  }
+
+  /* show if parent has .active */
+  #nav .dropdown.active > .dropdown-menu {
+    display: block !important;
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+}
 
 /* 
    Additional smaller-screen tweaks 
