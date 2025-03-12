@@ -1304,6 +1304,10 @@ body2 {
     padding: 15px;
     border-radius: 5px;
 }
+.overlay2 ul li {
+    margin: 2px 0; /* Reduce vertical spacing */
+    padding-left: 10px; /* Adjust alignment */
+}
 .overlay3 {
     position: absolute;
     top: 50%;  /* Centers the container vertically */
@@ -1319,7 +1323,8 @@ body2 {
 .columns-container {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
+	padding-left: 20px;
     color: white;
 }
 .columns-container3 {
