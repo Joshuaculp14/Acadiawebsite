@@ -1212,7 +1212,7 @@ body2 {
     transform: translate(-50%, -50%);
 	display: block;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     #banner-video {
         width: auto; /* Full viewport width */
         height: auto; /* Maintain aspect ratio */
@@ -1903,7 +1903,7 @@ h4.custom-h42 {
 .glass-card p {
     font-size: 0.95em;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     /* Adjusts the flex layout for smaller screens */
     .glass2 div {
         flex-wrap: wrap;
@@ -1916,13 +1916,13 @@ h4.custom-h42 {
         margin: 10px auto; /* Adds spacing between stacked elements */
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     /* Force mobile nav text color to #cfb06e */
     .dropdown-menu li a {
         color: #cfb06e !important;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     /* Force ALL nav links (top-level + dropdowns) to #cfb06e */
     #nav ul li a {
         display: block;
@@ -1931,13 +1931,13 @@ h4.custom-h42 {
 		color: #cfb06e !important;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     h2, .corporate-governance-section h2 {
         font-size: 6vw !important; /* Slightly smaller for tiny devices */
     }
 }
 /* Style for Dropdowns - Hidden by Default */
-@media (max-width: 768px){
+@media (max-width: 850px){
 	#nav .dropdown-menu {
     display: none;
     position: absolute;
@@ -1961,7 +1961,7 @@ h4.custom-h42 {
     }
 }
 /* Show dropdown on hover OR when active */
-@media (max-width: 768px){
+@media (max-width: 850px){
 	#nav .dropdown:hover > .dropdown-menu,
 	#nav .dropdown.active > .dropdown-menu {
     display: block;
@@ -1971,7 +1971,7 @@ h4.custom-h42 {
 	}
 }
  /* Remove scrollbar but keep finger scrolling */
-  @media (max-width: 768px){
+  @media (max-width: 850px){
 	  .dropdown-menu::-webkit-scrollbar {
         width: 0; /* Remove scrollbar */
         background: transparent;
@@ -1979,13 +1979,13 @@ h4.custom-h42 {
 	  
 }
 /* Dropdown Items */
-@media (max-width: 768px){
+@media (max-width: 850px){
 	#nav .dropdown-menu li {
     display: block;
     width: 100%;
 }
 }
-@media (max-width: 768px){
+@media (max-width: 850px){
 #nav .dropdown-menu li a {
     display: block;
     padding: 10px;
@@ -1994,12 +1994,12 @@ h4.custom-h42 {
     white-space: nowrap;
 }
 }
-@media (max-width: 768px){
+@media (max-width: 850px){
 #nav .dropdown-menu li a:hover {
     background-color: #2f3e4c;
 }
 }
-@media (max-width: 768px){
+@media (max-width: 850px){
  #nav ul li {
         display: block;
         width: 100%;
@@ -2008,7 +2008,7 @@ h4.custom-h42 {
     }
 }
 /* Mobile View: Stack Items Vertically */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
      #nav ul {
         display: flex;
         flex-direction: column;
@@ -2026,7 +2026,7 @@ h4.custom-h42 {
         position: static;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     #banner img {
         width: 60%; /* Adjust as needed */
         height: auto; /* Maintain aspect ratio */
@@ -2034,13 +2034,13 @@ h4.custom-h42 {
         margin: 0 auto; /* Center the logo */
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .parallax-bg, .parallax-bg2, .parallax-bg3, .parallax-bg4, .parallax-bg5, .parallax-bg6, .parallax-bg7, .parallax-bg8 {
         background-attachment: scroll; /* Removes parallax effect on mobile */
         background-position: center;
     }
 }
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .transport-section {
                 position: relative;
                 width: 100%;
